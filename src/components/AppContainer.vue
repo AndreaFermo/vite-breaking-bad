@@ -1,35 +1,32 @@
 <template>
     <div class="container">
-        <p>Found cards</p>
+        <p>Found N cards</p>
         <CardsContainer />
     </div>
 </template>
 <script>
 import CardsContainer from './CardsContainer.vue';
-import { store } from '../store.js'
+
 export default {
     name: 'AppContainer',
     components: {
         CardsContainer
     },
-    data() {
-        return {
-            store
-        }
-    }
+
 }
 </script>
 <style scoped lang="scss">
 .container {
     background-color: white;
-    width: 1100px;
+    width: 80%;
     padding: 20px;
-    margin: auto;
+    margin: 40px auto 0px;
 
     p {
         background-color: black;
         color: white;
         line-height: 40px;
+        margin: auto;
     }
 }
 </style>

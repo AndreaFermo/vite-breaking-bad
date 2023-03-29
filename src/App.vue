@@ -3,6 +3,7 @@
   <main>
     <AppContainer />
   </main>
+  <Loader />
 </template>
 
 <script>
@@ -10,11 +11,13 @@ import axios from 'axios';
 import { store } from './store.js';
 import AppHeader from './components/AppHeader.vue';
 import AppContainer from './components/AppContainer.vue';
+import Loader from './components/Loader.vue';
 
 export default {
   components: {
     AppHeader,
     AppContainer,
+    Loader,
   },
   data() {
     return {
@@ -23,9 +26,9 @@ export default {
   },
   methods: {
     getCards() {
-      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=Blue-Eyes').then(response => {
+      axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php').then(response => {
         this.store.cardList = response.data.data;
-        this.store.loading = true;
+        this.store.loading = false;
       });
     }
   },
