@@ -1,15 +1,21 @@
 <template>
     <div class="container">
-        <p>Found N cards</p>
+        <p>Found cards</p>
         <CardsContainer />
     </div>
 </template>
 <script>
 import CardsContainer from './CardsContainer.vue';
+import { store } from '../store.js'
 export default {
     name: 'AppContainer',
     components: {
         CardsContainer
+    },
+    data() {
+        return {
+            store
+        }
     }
 }
 </script>
