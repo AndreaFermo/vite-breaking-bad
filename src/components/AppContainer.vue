@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <p>Found N cards</p>
+        <p>Found cards</p>
         <CardsContainer />
     </div>
 </template>
@@ -12,6 +12,7 @@ export default {
     components: {
         CardsContainer
     },
+
 
 }
 </script>
@@ -26,7 +27,8 @@ export default {
         background-color: black;
         color: white;
         line-height: 40px;
-        margin: auto;
+        padding: 0px 20px;
+
     }
 }
 </style>
