@@ -6,7 +6,7 @@
 </template>
 <script>
 import MyCard from './MyCard.vue';
-import { store } from '../store.js'
+import { store } from '../store.js';
 export default {
     name: 'CardsContainer',
     data() {

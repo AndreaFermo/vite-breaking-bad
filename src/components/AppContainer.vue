@@ -1,10 +1,11 @@
 <template>
     <div class="container">
-        <p>Found cards</p>
+        <p>Found {{ foundCard }} cards</p>
         <CardsContainer />
     </div>
 </template>
 <script>
+import { store } from '../store.js';
 import CardsContainer from './CardsContainer.vue';
 
 export default {
@@ -12,6 +13,18 @@ export default {
     components: {
         CardsContainer
     },
+    data() {
+        return {
+            store
+        }
+    },
+    computed: {
+        foundCard() {
+            return this.store.cardList.length
+        }
+    }
+
+
 
 
 }
